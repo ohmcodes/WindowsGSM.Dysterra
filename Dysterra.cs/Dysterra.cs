@@ -10,6 +10,8 @@ using WindowsGSM.GameServer.Query;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+
+
 namespace WindowsGSM.Plugins
 {
     public class Dysterra : SteamCMDAgent
@@ -98,6 +100,9 @@ namespace WindowsGSM.Plugins
             //string updatedJsonString = jObject.ToString(Formatting.Indented);
             string output = JsonConvert.SerializeObject(o, Formatting.Indented);
             File.WriteAllText(jsonPath, output);
+
+
+            //Test Add button
 
             await Task.Delay(1000);
         }
@@ -232,4 +237,20 @@ namespace WindowsGSM.Plugins
             return await steamCMD.GetRemoteBuild(AppId);
         }
     }
+
+
+    
+    
 }
+
+//namespace WindowsGSM
+//{
+//    public partial class ButtonOverrideBehavior : MahApps
+//    {
+//        public static void Button_DiscordBotAddID_Click(object sender, RoutedEventArgs e)
+//        {
+//            // Your custom behavior for the "clickme" button
+//            Trace.WriteLine("Custom behavior for 'clickme' button.");
+//        }
+//    }
+//}
